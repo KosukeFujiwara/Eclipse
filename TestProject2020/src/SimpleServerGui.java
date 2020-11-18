@@ -13,7 +13,7 @@ public class SimpleServerGui {
 
 		try(ServerSocket server = new ServerSocket(PORTNUM);
 				Socket client = server.accept();
-				PrintWriter out = new PrintWriter(client.getOutputStream(),true);)
+				PrintWriter out = new PrintWriter(client.getOutputStream(), true);) //Streamにアウトプット！
 		{
 			System.out.println("クライアントが接続しました。");
 			out.println("Hello, client!");

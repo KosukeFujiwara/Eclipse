@@ -64,7 +64,7 @@ public class SimpleClientGui extends Application{
 			try(Socket soc = new Socket("127.0.0.1"/* サーバのIPアドレス*/, PORTNUM/*サーバ側で設定したポート番号*/);
 					){ //オートクローズ
 
-						Scanner sc = new Scanner(soc.getInputStream());
+						Scanner sc = new Scanner(soc.getInputStream());  //Streamから受け取る！
 
 						while(sc.hasNext()) {
 						String message = sc.nextLine();
